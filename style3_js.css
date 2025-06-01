@@ -1,0 +1,66 @@
+body {
+  background-color: beige;
+}
+
+h1, h2, p {
+  color: rgb(13, 87, 31);
+}
+
+#zoneText {
+  width: 30rem;
+  height: 1.5rem;
+  padding-left: 1rem;
+}
+
+#ajouter {
+  background-color: rgb(10, 75, 19);
+  color: aliceblue;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+#ajouter:hover {
+  background-color: rgb(90, 201, 167);
+}
+
+#supprimer {
+  background-color: rgb(10, 75, 19);
+  color: aliceblue;
+}
+
+#supprimer:hover {
+  background-color: rgb(90, 201, 167);
+}
+
+body {
+  margin-left: 10rem;
+}
+
+#listText {
+  width: 20rem;
+  height: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid;
+  width: 20rem;
+  height: 1.5rem;
+  padding-left: 1rem;
+  background-color: rgb(223, 241, 224);
+}
+
+#fait {
+  text-align: left;
+  border: none;
+  background-color:beige;
+}
+
+.barre {
+    text-decoration: line-through;
+    color:rgb(248, 244, 244);
+    background-color: rgb(109, 136, 109);
+}
