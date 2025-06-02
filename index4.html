@@ -29,8 +29,6 @@
       <label for="firstName">Prenom :</label>
       <input type="text" name="firstName" class="zoneTextFirtName" value="" />
 
-      <input type="submit" class="buttonForm" value="Envoyer le formulaire" />
-
       <label for="age">Votre âge :</label>
       <input type="number" name="age" class="zoneTextAge" value="" />
 
@@ -53,19 +51,67 @@
         <option>Autre</option>
       </select>
 
-
-      
       <label for="selectRegion">Profession</label>
       <select name="selectRegion" id="selectRegion">
-        <option> Île-de-France</option>
+        <option>Île-de-France</option>
         <option>Provence-Alpes-Côte d’Azur</option>
         <option>Bretagne</option>
         <option>Grand Est</option>
         <option>Auvergne-Rhône-Alpes</option>
       </select>
 
+      <fieldset>
+        <legend>Hobbies</legend>
 
+        <input
+          class="hobbies"
+          type="checkbox"
+          id="lecture"
+          name="lecture"
+          value="lecture"
+        />
+        <label for="lecture">Lecture</label>
 
+        <input
+          class="hobbies"
+          type="checkbox"
+          id="Sport"
+          name="Sport"
+          value="Sport"
+        />
+        <label for="Sport">Sport</label>
+
+        <input
+          class="hobbies"
+          type="checkbox"
+          id="Jeux vidéo"
+          name="Jeux vidéo"
+          value="Jeux vidéo"
+        />
+        <label for="Jeux video">Jeux vidéo</label>
+
+        <input
+          class="hobbies"
+          type="checkbox"
+          id="Musique"
+          name="Musique"
+          value="Musique"
+        />
+        <label for="Musique">Musique</label>
+
+        <input
+          class="hobbies"
+          type="checkbox"
+          id="Voyage"
+          name="Voyage"
+          value="Voyage"
+        />
+        <label for="Voyage">Voyage</label>
+      </fieldset>
+
+      <label for="mail">Lien Linkedin</label>
+      <input type="email" id="mail" name="user_email" />
+      <input type="submit" class="buttonForm" value="Envoyer le formulaire" />
     </form>
 
     <div class="card text-bg-secondary mb-3" style="max-width: 18rem">

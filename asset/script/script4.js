@@ -9,8 +9,12 @@ let inputElementfirstName = document.querySelector(".zoneTextFirtName");
 //la valeur de la zone de texte age
 let inputElementAge = document.querySelector(".zoneTextAge");
 
-// mon questionnaire homme / femme 
+// mon questionnaire homme / femme
 let radios = document.querySelectorAll(".quest");
+
+let checkboxs = document.querySelectorAll(".hobbies");
+
+let inputElementlienMail = document.querySelector("#mail");
 
 let inputElementprofession = document.querySelector("#selectProfession");
 
@@ -30,12 +34,14 @@ form.addEventListener("submit", (e) => {
   //permet d'arreter la soumission du formulaire
   e.preventDefault();
 
-
   displayName();
   displayFirstName();
   displayAge();
   displaySexHomme();
   displayPro();
+  displayRegion();
+  displayHobbies();
+  displayMail();
 });
 
 function displayName() {
@@ -66,49 +72,51 @@ function displayAge() {
 }
 
 function displaySexHomme() {
-
-    for (let index = 0; index < radios.length; index++) {
-        if(radios[index].checked){
-            radios[index].value
-            console.log(radios[index].value)
-              let listSex = document.querySelector("li");
-             listSex.innerHTML = radios[index].value
-                conteneurUl.appendChild(listSex);
-        } 
+  for (let index = 0; index < radios.length; index++) {
+    if (radios[index].checked) {
+      radios[index].value;
+      console.log(radios[index].value);
+      let listSex = document.querySelector("li");
+      listSex.innerHTML = radios[index].value;
+      conteneurUl.appendChild(listSex);
     }
+  }
 }
 
 function displayPro() {
-    let selectPro = inputElementprofession.value;
-    console.log(selectPro);
+  let selectPro = inputElementprofession.value;
+  console.log(selectPro);
 
-    let listPro = document.createElement("li");
-    listPro.innerHTML = selectPro;
-    conteneurUl.appendChild(listPro);
+  let listPro = document.createElement("li");
+  listPro.innerHTML = selectPro;
+  conteneurUl.appendChild(listPro);
 }
 
 function displayRegion() {
-    let selectRegion = inputElementRegion.value;
-    console.log(selectRegion);
+  let selectRegion = inputElementRegion.value;
+  console.log(selectRegion);
 
-    let listRegion = document.querySelector("li");
-    listRegion.innerHTML = selectRegion;
-    conteneurUl.appendChild(listRegion); 
+  let listRegion = document.querySelector("li");
+  listRegion.innerHTML = selectRegion;
+  conteneurUl.appendChild(listRegion);
 }
 
+function displayHobbies() {
+  let ul = document.createElement("ul");
+  for (let index = 0; index < checkboxs.length; index++) {
+    if (checkboxs[index].checked) {
+      let listCheckboxs = document.querySelector("li");
+      listCheckboxs.innerHTML = checkboxs[index].value;
+      ul.appendChild(listCheckboxs);
+    }
+    conteneurUl.append(ul);
+  }
+}
 
+function displayMail() {
+  let lienMail = inputElementlienMail.value;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let listMail = document.querySelector("li");
+  listMail.innerHTML = lienMail;
+  conteneurUl.appendChild(lienMail);
+}
