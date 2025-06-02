@@ -9,6 +9,13 @@ let inputElementfirstName = document.querySelector(".zoneTextFirtName");
 //la valeur de la zone de texte age
 let inputElementAge = document.querySelector(".zoneTextAge");
 
+// mon questionnaire homme / femme 
+let radios = document.querySelectorAll(".quest");
+
+let inputElementprofession = document.querySelector("#selectProfession");
+
+let inputElementRegion = document.querySelector("#selectRegion");
+
 //bouton pour sommettre
 let buttonSubmit = document.querySelector(".buttonForm");
 // console.log(buttonSubmit);
@@ -23,18 +30,12 @@ form.addEventListener("submit", (e) => {
   //permet d'arreter la soumission du formulaire
   e.preventDefault();
 
-  // new variable textName on lui donne la valeur inputElementName
-
-  // new variable textName on lui donne la valeur inputElementfirstName
-  let textFirstName = inputElementfirstName.value;
-  console.log(textFirstName);
-
-  // new variable textAge on lui donne la valeur inputElementAge
-  let textAge = inputElementAge.value;
-  console.log(textAge);
 
   displayName();
   displayFirstName();
+  displayAge();
+  displaySexHomme();
+  displayPro();
 });
 
 function displayName() {
@@ -54,3 +55,60 @@ function displayFirstName() {
   listFirstName.innerHTML = textFirstName;
   conteneurUl.appendChild(listFirstName);
 }
+
+function displayAge() {
+  let textAge = inputElementAge.value;
+  console.log(textAge);
+
+  let listAge = document.createElement("li");
+  listAge.innerHTML = textAge;
+  conteneurUl.appendChild(listAge);
+}
+
+function displaySexHomme() {
+
+    for (let index = 0; index < radios.length; index++) {
+        if(radios[index].checked){
+            radios[index].value
+            console.log(radios[index].value)
+              let listSex = document.querySelector("li");
+             listSex.innerHTML = radios[index].value
+                conteneurUl.appendChild(listSex);
+        } 
+    }
+}
+
+function displayPro() {
+    let selectPro = inputElementprofession.value;
+    console.log(selectPro);
+
+    let listPro = document.createElement("li");
+    listPro.innerHTML = selectPro;
+    conteneurUl.appendChild(listPro);
+}
+
+function displayRegion() {
+    let selectRegion = inputElementRegion.value;
+    console.log(selectRegion);
+
+    let listRegion = document.querySelector("li");
+    listRegion.innerHTML = selectRegion;
+    conteneurUl.appendChild(listRegion); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
