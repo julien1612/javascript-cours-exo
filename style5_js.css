@@ -1,4 +1,10 @@
 
 body {
-    background-color: rgb(227, 106, 106);
+    background-color: rgb(238, 166, 166);
+}
+
+.buttonGoDuel {
+    background-color: rgb(247, 9, 9);
+    color: aliceblue;
+
 }
