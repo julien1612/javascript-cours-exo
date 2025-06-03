@@ -2,3 +2,29 @@
 body {
     background-color: rgb(170, 208, 195);
 }
+
+h1 {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    color: rgb(5, 5, 125);
+}
+
+form {
+    margin-left: 5rem;
+    padding: 2rem;
+}
+
+.section1Form {
+    margin-bottom: 3rem;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+.buttonForm {
+    background-color:rgb(5, 5, 125);
+    color: aliceblue;
+    margin-left: 2rem;
+}

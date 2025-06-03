@@ -14,7 +14,7 @@ let radios = document.querySelectorAll(".quest");
 
 let checkboxs = document.querySelectorAll(".hobbies");
 
-let inputElementlienMail = document.querySelector("#mail");
+let inputElementlienUrl = document.querySelector("#url");
 
 let inputElementprofession = document.querySelector("#selectProfession");
 
@@ -24,8 +24,8 @@ let inputElementRegion = document.querySelector("#selectRegion");
 let buttonSubmit = document.querySelector(".buttonForm");
 // console.log(buttonSubmit);
 
-let form = document.querySelector(".formNamefirstName");
-// console.log(form)
+let form = document.querySelector(".formulaire");
+console.log(form);
 
 let conteneurUl = document.querySelector(".card-title");
 
@@ -34,6 +34,8 @@ form.addEventListener("submit", (e) => {
   //permet d'arreter la soumission du formulaire
   e.preventDefault();
 
+  conteneurUl.innerHTML = "";
+
   displayName();
   displayFirstName();
   displayAge();
@@ -41,7 +43,7 @@ form.addEventListener("submit", (e) => {
   displayPro();
   displayRegion();
   displayHobbies();
-  displayMail();
+  displayUrl();
 });
 
 function displayName() {
@@ -67,16 +69,15 @@ function displayAge() {
   console.log(textAge);
 
   let listAge = document.createElement("li");
-  listAge.innerHTML = textAge;
+  listAge.innerHTML = textAge + " ans";
   conteneurUl.appendChild(listAge);
 }
 
 function displaySexHomme() {
   for (let index = 0; index < radios.length; index++) {
     if (radios[index].checked) {
-      radios[index].value;
       console.log(radios[index].value);
-      let listSex = document.querySelector("li");
+      let listSex = document.createElement("li");
       listSex.innerHTML = radios[index].value;
       conteneurUl.appendChild(listSex);
     }
@@ -96,7 +97,7 @@ function displayRegion() {
   let selectRegion = inputElementRegion.value;
   console.log(selectRegion);
 
-  let listRegion = document.querySelector("li");
+  let listRegion = document.createElement("li");
   listRegion.innerHTML = selectRegion;
   conteneurUl.appendChild(listRegion);
 }
@@ -105,18 +106,18 @@ function displayHobbies() {
   let ul = document.createElement("ul");
   for (let index = 0; index < checkboxs.length; index++) {
     if (checkboxs[index].checked) {
-      let listCheckboxs = document.querySelector("li");
+      let listCheckboxs = document.createElement("li");
       listCheckboxs.innerHTML = checkboxs[index].value;
       ul.appendChild(listCheckboxs);
     }
-    conteneurUl.append(ul);
+    conteneurUl.appendChild(ul);
   }
 }
 
-function displayMail() {
-  let lienMail = inputElementlienMail.value;
+function displayUrl() {
+  let lienUrl = inputElementlienUrl.value;
 
-  let listMail = document.querySelector("li");
-  listMail.innerHTML = lienMail;
-  conteneurUl.appendChild(lienMail);
+  let listUrl = document.createElement("li");
+  listUrl.innerHTML = lienUrl;
+  conteneurUl.appendChild(listUrl);
 }

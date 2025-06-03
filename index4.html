@@ -22,9 +22,12 @@
   <body>
     <h1>Formulaire Profil :</h1>
 
-    <form action="" method="get" class="formNamefirstName">
+    <form action="" method="get" class="formulaire">
+
+      
       <label for="name">Nom :</label>
       <input type="text" name="name" class="zoneTextName" />
+      
 
       <label for="firstName">Prenom :</label>
       <input type="text" name="firstName" class="zoneTextFirtName" value="" />
@@ -44,6 +47,7 @@
 
       <label for="selectProfession">Profession</label>
       <select name="selectProfession" id="selectProfession">
+        <option>---sélectionner---</option>
         <option>Étudiant(e)</option>
         <option>Développeur(se)</option>
         <option>Enseignant(e)</option>
@@ -51,8 +55,9 @@
         <option>Autre</option>
       </select>
 
-      <label for="selectRegion">Profession</label>
+      <label for="selectRegion">Region</label>
       <select name="selectRegion" id="selectRegion">
+        <option>---sélectionner---</option>
         <option>Île-de-France</option>
         <option>Provence-Alpes-Côte d’Azur</option>
         <option>Bretagne</option>
@@ -109,14 +114,16 @@
         <label for="Voyage">Voyage</label>
       </fieldset>
 
-      <label for="mail">Lien Linkedin</label>
-      <input type="email" id="mail" name="user_email" />
+      <label for="lien">Lien Linkedin</label>
+      <input type="url" id="url" name="userURL" />
       <input type="submit" class="buttonForm" value="Envoyer le formulaire" />
     </form>
 
     <div class="card text-bg-secondary mb-3" style="max-width: 18rem">
       <div class="card-body">
-        <ul class="card-title"></ul>
+        <ul class="card-title">
+          <h5>Mes informations :</h5>
+        </ul>
       </div>
     </div>
   </body>
