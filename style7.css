@@ -1,4 +1,24 @@
-
 body {
-    background-color: bisque;
+  background-color: bisque;
+}
+
+.ajouter {
+  background-color: rgb(113, 113, 213);
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.supprimer {
+  background-color: rgb(240, 14, 14);
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.paragraphe {
+  width: 9rem;
+  height: 9rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  font-size: 2rem;
 }
