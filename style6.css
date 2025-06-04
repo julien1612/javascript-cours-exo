@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(202, 179, 223);
+}
+
+.paragraphe {
+    border: solid;
+    border-color: rgb(145, 92, 108);
+    width: 5rem;
+    text-align: center;
+}
+
+.formulaire {
+    padding: 2rem;
+}
+
+.nameAnimal {
+   padding: 1rem; 
+}
+
+.raceAnimal {
+    padding: 1rem;
+}
+
