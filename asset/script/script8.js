@@ -16,13 +16,20 @@ let boutonCitations = document.querySelector(".citations");
 // console.log(boutonCitations)
 let content = document.querySelector(".content");
 
+
+
 boutonCitations.addEventListener("click", () => {
+
+      content.innerHTML = "" // écraser les autres cartes
+
   fetch("https://kaamelott.xyz/api/v1/quote/random")
     .then((Response) => {
       return Response.json();
     })
     .then((data) => {
-      console.log(data.content);
+      console.log(data)
+      data.characts.content
+
 
       // pour encadrer mon texte
 
@@ -34,10 +41,15 @@ boutonCitations.addEventListener("click", () => {
       let cardBody = document.createElement("div"); // créer une autre carte dans le conteneur 
       cardBody.classList.add("card-body");
 
-      let cita = document.createElement("p"); // créer mon para à l'intérieure 
-      cita.innerHTML = data.content;
+      let characts = document.createElement("p");
+      characts.innerHTML = data.characts
 
+      let cita = document.createElement("p"); // créer mon para à l'intérieure 
+      cita.innerHTML = data.content
+
+      cardBody.appendChild(characts)
       cardBody.append(cita);
+      
       cardDiv.append(cardBody); // insérer le para dans la carte qui est dans la carte conteneur
       content.append(cardDiv);
 
