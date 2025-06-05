@@ -80,4 +80,5 @@ para.appendChild(totalCard);
     inputElementType.value = "";
     inputElementPower.value = "";
 
+    
   });
