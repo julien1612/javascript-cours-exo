@@ -58,6 +58,7 @@ let para = document.querySelector(".paragraphe");
 
 form.addEventListener("submit", (e) => {
  e.preventDefault();
+para.innerHTML = ""
 
  let objet = {      // objet qui récupére mes valeurs
     'name' : inputElementName.value,
